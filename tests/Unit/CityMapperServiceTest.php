@@ -45,16 +45,6 @@ class CityMapperServiceTest extends TestCase
         $this->assertInstanceOf(CityMapperService::class, $this->service);
     }
 
-    public function testServiceCanReturnTransitTime()
-    {
-        $this->assertEquals(
-            42,
-            $this->service->getTransitTime(
-                $this->startCoordinates,
-                $this->endCoordinates
-            )->travel_time_minutes);
-    }
-
     private function baseURL(): string
     {
         return "https://developer.citymapper.com/api/1/";
